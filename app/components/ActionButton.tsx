@@ -6,7 +6,8 @@
  * @Date 12/04/2024
  */
 import {Pressable, StyleSheet, Text, View} from 'react-native';
-import QrCodeEdit from '../assets/svg/qr-code-edit.svg';
+//import QrCodeEditIcon from '../assets/svg/qr-code-edit.svg';
+//import ShareIconIcon from '../assets/svg/share.svg';
 import React from 'react';
 
 type ActionButtonProps = {
@@ -21,11 +22,11 @@ const ActionButton: React.FC<ActionButtonProps> = ({
   return (
     <View style={styles.container}>
       <Pressable style={styles.button} onPress={onEdit}>
-        <QrCodeEdit />
+        {/*<QrCodeEditIcon />*/}
         <Text style={styles.textButton}>Edit</Text>
       </Pressable>
       <Pressable style={styles.button} onPress={onShare}>
-        <QrCodeEdit />
+        {/*<ShareIconIcon />*/}
         <Text style={styles.textButton}>Share</Text>
       </Pressable>
     </View>
@@ -34,6 +35,8 @@ const ActionButton: React.FC<ActionButtonProps> = ({
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 16,

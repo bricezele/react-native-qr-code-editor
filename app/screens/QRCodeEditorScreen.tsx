@@ -7,11 +7,16 @@
  */
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
+import SafeAreaWithInsets from '../components/SafeAreaWithInsets.tsx';
 
 const QRCodeEditorScreen: React.FC = ({}): React.JSX.Element => {
   const rootViewRef = useRef<View>(null);
 
-  return <View ref={rootViewRef} collapsable={false} style={styles.flex} />;
+  return (
+    <SafeAreaWithInsets>
+      <View ref={rootViewRef} collapsable={false} style={styles.flex} />
+    </SafeAreaWithInsets>
+  );
 };
 
 const styles = StyleSheet.create({
